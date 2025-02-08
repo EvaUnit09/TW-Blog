@@ -42,21 +42,28 @@ export default function Home({ posts }) {
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             {/* TryHackMe Profile */}
             <div
-              className="flex flex-col items-center space-y-4 rounded-lg bg-gray-800 p-6 shadow-md"
-              style={{ height: '300px', width: '100%' }}
+              className="flex flex-col items-center space-y-2 rounded-lg bg-gray-800 p-6 shadow-md"
+              style={{ height: 'auto', width: '100%', maxWidth: '420px' }} // Constrain to iframe size
             >
               <h3 className="text-xl font-bold">TryHackMe</h3>
-              <iframe
-                src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=3557796"
+              <div
+                className="flex items-center justify-center"
                 style={{
-                  border: 'none',
-                  width: '80%',
-                  height: '120px',
-                  overflow: 'hidden',
-                  transform: 'scale(1.2)',
+                  width: '89%',
+                  maxWidth: '420px', // Ensure it matches iframe dimensions
+                  height: 'auto',
                 }}
-                title="TryHackMe Badge"
-              ></iframe>
+              >
+                <iframe
+                  src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=3557796"
+                  style={{
+                    border: 'none',
+                    width: '420px', // Exact width of iframe content
+                    height: '88px', // Exact height of iframe content
+                  }}
+                  title="TryHackMe Badge"
+                ></iframe>
+              </div>
               <a
                 href="https://tryhackme.com/p/Noahnotnull"
                 target="_blank"
