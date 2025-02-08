@@ -2,7 +2,6 @@
 
 # Tailwind Nextjs CyberSecurity Blog
 
-
 Welcome to my Cybersecurity Knowledge Blog repository! This is a personal project where I document my journey in cybersecurity, share write-ups, compile resources, and take notes on everything related to the field of cyber.
 
 About This Blog
@@ -15,16 +14,15 @@ Resources: A curated collection of tools, articles, tutorials, and references fo
 
 Notes: Personal notes from training, certifications, and hands-on projects in areas like:
 
-* Network Security
+- Network Security
 
-* Malware Analysis
+- Malware Analysis
 
-* Penetration Testing
+- Penetration Testing
 
-* Incident Response
+- Incident Response
 
-* Web Application Security
-
+- Web Application Security
 
 ## Features
 
@@ -46,30 +44,29 @@ Organized summaries from courses, certifications, and research.
 
 Covering topics such as:
 
-* Networking
+- Networking
 
-* Cryptography
+- Cryptography
 
-* Forensics
+- Forensics
 
-* Threat Hunting
+- Threat Hunting
 
-* Tech Stack
+- Tech Stack
 
 ## This blog is built with:
 
-* Next.js
+- Next.js
 
-* TypeScript
+- TypeScript
 
-* Tailwind CSS for styling
+- Tailwind CSS for styling
 
-* Markdown for content management
+- Markdown for content management
 
 Deployed and hosted on [GitHub Pages/Vercel/Netlify] (update based on your hosting platform).
 
 ## Contributing
-
 
 ## License
 
@@ -88,5 +85,3 @@ The content shared here is for educational purposes only. Any actions taken base
 Happy hacking and learning!
 
 Author: Noah (EvaUnit09)
-
-

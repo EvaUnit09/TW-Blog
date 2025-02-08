@@ -96,18 +96,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <link rel="alternate" type="application/rss+xml" href={`${basePath}/feed.xml`} />
       <body className="bg-gray-900 pl-[calc(100vw-100%)] text-white antialiased dark:bg-gray-950 dark:text-white">
         <ThemeProviders>
-        <div
-            // className="min-h-screen bg-repeat bg-left-top"
-            // style={{backgroundImage: "url('/static/images/bg-body.jpg')"}}
+          <div
+          // className="min-h-screen bg-repeat bg-left-top"
+          // style={{backgroundImage: "url('/static/images/bg-body.jpg')"}}
           >
-          <Analytics analyticsConfig={siteMetadata.analytics as AnalyticsConfig} />
-          <SectionContainer>
-            <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
-              <Header />
-              <main className="mb-auto">{children}</main>
-            </SearchProvider>
-            <Footer />
-          </SectionContainer>
+            <Analytics analyticsConfig={siteMetadata.analytics as AnalyticsConfig} />
+            <SectionContainer>
+              <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
+                <Header />
+                <main className="mb-auto">{children}</main>
+              </SearchProvider>
+              <Footer />
+            </SectionContainer>
           </div>
         </ThemeProviders>
       </body>

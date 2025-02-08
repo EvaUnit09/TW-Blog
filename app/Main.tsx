@@ -10,76 +10,97 @@ export default function Home({ posts }) {
   return (
     <>
       {/* Cybersecurity Profiles Section */}
-      <div className="bg-gray-900 text-white p-8 rounded-lg mb-8">
+      <div className="mb-8 rounded-lg bg-gray-900 p-8 text-white">
         <div className="flex flex-col items-center space-y-6">
-    {/* Personal Info and icons */}
+          {/* Personal Info and icons */}
 
-      <div className="flex justify-center space-x-6 mt-4">
-        <a href="https://github.com/EvaUnit09" target="_blank" rel="noopener noreferrer">
-          <img src="/static/images/githubicon1.png" alt="GitHub" />
-        </a>
-        <a href="https://tryhackme.com/p/noahnotnulls" target="_blank" rel="noopener noreferrer">
-          <img src="/static/images/THMlogo.svg" alt="TryHackMe" style={{height: '100px', width: '100px'}}/>
-        </a>
-        <a
-          href="https://www.hackthebox.com/home/users/profile/EvaUnit09"
-          target="_blank"
-          rel="noopener noreferrer">
-          <img src="/static/images/HackTheBox.svg" alt="HackTheBox" className="h-8 w-8" style={{height: '80px', width: '80px'}}/>
-        </a>
-      </div>
-    </div>
-
-    {/* Cybersecurity Profiles Section */}
-    <div className="mt-12">
-      <h2 className="text-3xl font-semibold text-center mb-8">Training Profiles</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {/* TryHackMe Profile */}
-        <div className="bg-gray-800 p-6 rounded-lg flex flex-col items-center space-y-4 shadow-md" style={{ height: '300px', width: '100%'}}>
-          <h3 className='text-xl font-bold'>TryHackMe</h3>
-          <iframe
-        src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=3557796"
-        style={{ border: 'none', width: '80%', height: '120px', overflow: 'hidden', transform: 'scale(1.3)' }}
-        title="TryHackMe Badge">
-
-        </iframe>
-      <a
-        href='https://tryhackme.com/p/Noahnotnull'
-        target='_blank'
-        rel='noopener noreferrer'
-        className='text-green-400 hover:underline'
-        >
-          View Profile
-          </a>
+          <div className="mt-4 flex justify-center space-x-6">
+            <a href="https://github.com/EvaUnit09" target="_blank" rel="noopener noreferrer">
+              <img src="/static/images/githubicon1.png" alt="GitHub" />
+            </a>
+            <a
+              href="https://tryhackme.com/p/noahnotnulls"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/static/images/THMlogo.svg"
+                alt="TryHackMe"
+                style={{ height: '100px', width: '100px' }}
+              />
+            </a>
+            <a
+              href="https://www.hackthebox.com/home/users/profile/EvaUnit09"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/static/images/HackTheBox.svg"
+                alt="HackTheBox"
+                className="h-8 w-8"
+                style={{ height: '80px', width: '80px' }}
+              />
+            </a>
+          </div>
         </div>
 
-        {/* HackTheBox Profile */}
-        <div className="bg-gray-800 p-6 rounded-lg flex flex-col items-center space-y-4 shadow-md">
-        <h3 className="text-xl font-bold">HackTheBox</h3>
-        <a
-        href="https://app.hackthebox.com/profile/2242696"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img
-          src="/static/images/htbBadge.png"
-          alt="Hack The Box Profile Badge"
-          className="rounded-lg object-cover object-center shadow-xl shadow-blue-gray-900/50"
-        />
-      </a>
-      <a
-        href="https://app.hackthebox.com/profile/2242696"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-green-400 hover:underline"
-      >
-        View Profile
-      </a>
+        {/* Cybersecurity Profiles Section */}
+        <div className="mt-12">
+          <h2 className="mb-8 text-center text-3xl font-semibold">Training Profiles</h2>
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+            {/* TryHackMe Profile */}
+            <div
+              className="flex flex-col items-center space-y-4 rounded-lg bg-gray-800 p-6 shadow-md"
+              style={{ height: '300px', width: '100%' }}
+            >
+              <h3 className="text-xl font-bold">TryHackMe</h3>
+              <iframe
+                src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=3557796"
+                style={{
+                  border: 'none',
+                  width: '80%',
+                  height: '120px',
+                  overflow: 'hidden',
+                  transform: 'scale(1.3)',
+                }}
+                title="TryHackMe Badge"
+              ></iframe>
+              <a
+                href="https://tryhackme.com/p/Noahnotnull"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-green-400 hover:underline"
+              >
+                View Profile
+              </a>
+            </div>
+
+            {/* HackTheBox Profile */}
+            <div className="flex flex-col items-center space-y-4 rounded-lg bg-gray-800 p-6 shadow-md">
+              <h3 className="text-xl font-bold">HackTheBox</h3>
+              <a
+                href="https://app.hackthebox.com/profile/2242696"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="/static/images/htbBadge.png"
+                  alt="Hack The Box Profile Badge"
+                  className="shadow-blue-gray-900/50 rounded-lg object-cover object-center shadow-xl"
+                />
+              </a>
+              <a
+                href="https://app.hackthebox.com/profile/2242696"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-green-400 hover:underline"
+              >
+                View Profile
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-
 
       {/* Existing Latest Posts Section */}
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
@@ -109,10 +130,7 @@ export default function Home({ posts }) {
                       <div className="space-y-6">
                         <div>
                           <h2 className="text-2xl font-bold leading-8 tracking-tight">
-                            <Link
-                              href={`/blog/${slug}`}
-                              className="text-white dark:text-gray-100"
-                            >
+                            <Link href={`/blog/${slug}`} className="text-white dark:text-gray-100">
                               {title}
                             </Link>
                           </h2>
@@ -154,7 +172,6 @@ export default function Home({ posts }) {
           </Link>
         </div>
       )}
-      
     </>
   )
 }

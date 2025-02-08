@@ -1,14 +1,14 @@
 import siteMetadata from '@/data/siteMetadata'
 import headerNavLinks from '@/data/headerNavLinks'
-import Logo from '@/data/pixel-computer.png';
+import Logo from '@/data/pixel-computer.png'
 import Link from './Link'
 import MobileNav from './MobileNav'
-import Image from 'next/image';
+import Image from 'next/image'
 // import ThemeSwitch from './ThemeSwitch'
 import SearchButton from './SearchButton'
 
 const Header = () => {
-  let headerClass = 'flex items-center w-full justify-between py-4 bg-gray-900 text-white z-50';
+  const headerClass = 'flex items-center w-full justify-between py-4 bg-gray-900 text-white z-50'
   // if (siteMetadata.stickyNav) {
   //   headerClass += ' fixed top-0';
   // } else {
@@ -48,7 +48,7 @@ const Header = () => {
         <MobileNav />
       </div>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
