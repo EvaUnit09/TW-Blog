@@ -31,8 +31,7 @@ export default function Home({ posts }) {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Image
-                src="/static/images/HackTheBox.svg" alt="HackTheBox" height={80} width={80} />
+              <Image src="/static/images/HackTheBox.svg" alt="HackTheBox" height={80} width={80} />
             </a>
           </div>
         </div>
