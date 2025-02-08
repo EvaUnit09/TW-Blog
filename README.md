@@ -7,7 +7,7 @@ Welcome to my Cybersecurity Knowledge Blog repository! This is a personal projec
 
 About This Blog
 
-This blog serves as a knowledge hub for:
+## This blog serves as a knowledge hub for:
 
 Write-ups: Detailed solutions and explanations for cybersecurity challenges, labs, and CTFs.
 
@@ -15,73 +15,73 @@ Resources: A curated collection of tools, articles, tutorials, and references fo
 
 Notes: Personal notes from training, certifications, and hands-on projects in areas like:
 
-Network Security
+* Network Security
 
-Malware Analysis
+* Malware Analysis
 
-Penetration Testing
+* Penetration Testing
 
-Incident Response
+* Incident Response
 
-Web Application Security
+* Web Application Security
 
 
-Features
+## Features
 
-Write-ups:
+1. Write-ups:
 
 Step-by-step explanations for solving cybersecurity challenges.
 
 Categorized by platform (e.g., Hack The Box, TryHackMe) and difficulty level.
 
-Resources:
+2. Resources:
 
 Links to recommended tools, guides, and frameworks.
 
 Handy cheat sheets for quick reference.
 
-Notes:
+3. Notes:
 
 Organized summaries from courses, certifications, and research.
 
 Covering topics such as:
 
-Networking
+* Networking
 
-Cryptography
+* Cryptography
 
-Forensics
+* Forensics
 
-Threat Hunting
+* Threat Hunting
 
-Tech Stack
+* Tech Stack
 
-This blog is built with:
+## This blog is built with:
 
-Next.js
+*Next.js
 
-TypeScript
+* TypeScript
 
-Tailwind CSS for styling
+* Tailwind CSS for styling
 
-Markdown for content management
+* Markdown for content management
 
 Deployed and hosted on [GitHub Pages/Vercel/Netlify] (update based on your hosting platform).
 
-Contributing
+## Contributing
 
 
-License
+## License
 
 This project is licensed under the MIT License.
 
-Acknowledgments
+## Acknowledgments
 
 Hack The Box and TryHackMe for providing incredible learning platforms.
 
 The cybersecurity community for their endless resources and inspiration.
 
-Disclaimer
+## Disclaimer
 
 The content shared here is for educational purposes only. Any actions taken based on this content are solely your responsibility. Always ensure you have proper authorization before engaging in any cybersecurity activities.
 
