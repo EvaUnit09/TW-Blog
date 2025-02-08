@@ -49,7 +49,7 @@ export default function Home({ posts }) {
               <div
                 className="flex items-center justify-center"
                 style={{
-                  width: '89%',
+                  width: '85%',
                   maxWidth: '420px', // Ensure it matches iframe dimensions
                   height: 'auto',
                 }}
