@@ -2,6 +2,7 @@ import Link from '@/components/Link'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { formatDate } from 'pliny/utils/formatDate'
+import Image from 'next/image'
 // import NewsletterForm from 'pliny/ui/NewsletterForm'
 
 const MAX_DISPLAY = 5
@@ -16,29 +17,26 @@ export default function Home({ posts }) {
 
           <div className="mt-4 flex justify-center space-x-6">
             <a href="https://github.com/EvaUnit09" target="_blank" rel="noopener noreferrer">
-              <img src="/static/images/githubicon1.png" alt="GitHub" />
+              <Image src="/static/images/githubicon1.png" alt="GitHub" width={80} height={80} />
             </a>
             <a
               href="https://tryhackme.com/p/noahnotnulls"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img
-                src="/static/images/THMlogo.svg"
-                alt="TryHackMe"
-                style={{ height: '100px', width: '100px' }}
-              />
+              <Image src="/static/images/THMlogo.svg" alt="TryHackMe" width={100} height={100} />
             </a>
             <a
               href="https://www.hackthebox.com/home/users/profile/EvaUnit09"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img
+              <Image
                 src="/static/images/HackTheBox.svg"
                 alt="HackTheBox"
                 className="h-8 w-8"
-                style={{ height: '80px', width: '80px' }}
+                height={80}
+                width={80}
               />
             </a>
           </div>
@@ -83,10 +81,12 @@ export default function Home({ posts }) {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img
+                <Image
                   src="/static/images/htbBadge.png"
                   alt="Hack The Box Profile Badge"
                   className="shadow-blue-gray-900/50 rounded-lg object-cover object-center shadow-xl"
+                  height={80}
+                  width={80}
                 />
               </a>
               <a
