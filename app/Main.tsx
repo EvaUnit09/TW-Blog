@@ -17,7 +17,7 @@ export default function Home({ posts }) {
 
           <div className="mt-4 flex justify-center space-x-6">
             <a href="https://github.com/EvaUnit09" target="_blank" rel="noopener noreferrer">
-              <Image src="/static/images/githubicon1.png" alt="GitHub" width={80} height={80} />
+              <Image src="/static/images/githubicon1.png" alt="GitHub" width={90} height={90} />
             </a>
             <a
               href="https://tryhackme.com/p/noahnotnulls"
@@ -32,12 +32,7 @@ export default function Home({ posts }) {
               rel="noopener noreferrer"
             >
               <Image
-                src="/static/images/HackTheBox.svg"
-                alt="HackTheBox"
-                className="h-8 w-8"
-                height={80}
-                width={80}
-              />
+                src="/static/images/HackTheBox.svg" alt="HackTheBox" height={80} width={80} />
             </a>
           </div>
         </div>
@@ -59,7 +54,7 @@ export default function Home({ posts }) {
                   width: '80%',
                   height: '120px',
                   overflow: 'hidden',
-                  transform: 'scale(1.3)',
+                  transform: 'scale(1.2)',
                 }}
                 title="TryHackMe Badge"
               ></iframe>
@@ -85,8 +80,8 @@ export default function Home({ posts }) {
                   src="/static/images/htbBadge.png"
                   alt="Hack The Box Profile Badge"
                   className="shadow-blue-gray-900/50 rounded-lg object-cover object-center shadow-xl"
-                  height={80}
-                  width={80}
+                  height={300}
+                  width={300}
                 />
               </a>
               <a

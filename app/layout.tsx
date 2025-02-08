@@ -94,7 +94,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff" />
       <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
       <link rel="alternate" type="application/rss+xml" href={`${basePath}/feed.xml`} />
-      <body className="bg-gray-900 pl-[calc(100vw-100%)] text-white antialiased dark:bg-gray-950 dark:text-white">
+      <body className="bg-gray-900 pl-[calc(100vw-100%)] text-white antialiased dark:bg-gray-900 dark:text-white">
         <ThemeProviders>
           <div
           // className="min-h-screen bg-repeat bg-left-top"
