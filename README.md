@@ -58,7 +58,7 @@ Covering topics such as:
 
 ## This blog is built with:
 
-*Next.js
+* Next.js
 
 * TypeScript
 
