@@ -49,8 +49,8 @@ export default function Home({ posts }) {
               <div
                 className="flex items-center justify-center"
                 style={{
-                  width: '85%',
-                  maxWidth: '420px', // Ensure it matches iframe dimensions
+                  width: '90%',
+                  maxWidth: '410px', // Ensure it matches iframe dimensions
                   height: 'auto',
                 }}
               >
@@ -58,7 +58,7 @@ export default function Home({ posts }) {
                   src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=3557796"
                   style={{
                     border: 'none',
-                    width: '420px', // Exact width of iframe content
+                    width: '410px', // Exact width of iframe content
                     height: '88px', // Exact height of iframe content
                   }}
                   title="TryHackMe Badge"
