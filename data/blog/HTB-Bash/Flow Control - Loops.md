@@ -1,0 +1,139 @@
+---
+title: 'Flow Control - Loops'
+date: '2025-2-16'
+tags: ['HTB', 'guide', 'Bash']
+draft: false
+summary: 'Loops allow scripts to repeat tasks efficiently.'
+created: 2025-02-16T13:44
+updated: 2025-02-16T13:44
+---
+
+# Flow Control - Loops - HTB Notes
+
+## Overview
+
+Loops allow Bash scripts to repeat tasks efficiently. Bash provides three types of loops:
+
+- **For Loops**: Iterate over a list of values.
+- **While Loops**: Execute while a condition is true.
+- **Until Loops**: Execute until a condition becomes true.
+
+---
+
+## Problem Description: Automating Repetitive Tasks with Loops
+
+A script should repeat an operation multiple times, such as scanning multiple hosts or encoding data.
+
+### **Input & Output**
+
+**Input:** Lists, counters, or conditions  
+**Output:** Repeated execution of commands
+
+**Example Execution:**
+
+```bash
+./loop_script.sh
+```
+
+**Example Output:**
+
+```
+Counter: 1
+Counter: 2
+Counter: 3
+...
+Counter: 10
+```
+
+---
+
+## Topics & Patterns
+
+- **For Loops (`for var in list; do ... done`)**: Iterate over lists.
+- **While Loops (`while [ condition ]; do ... done`)**: Repeat while a condition holds.
+- **Until Loops (`until [ condition ]; do ... done`)**: Repeat until a condition is met.
+- **Loop Control (`break`, `continue`)**: Modify loop execution.
+
+---
+
+## Solution & Complexity
+
+### **Key Ideas**
+
+- `for var in list`: Iterate over items.
+- `while [ condition ]`: Run until condition changes.
+- `until [ condition ]`: Run until condition becomes true.
+
+### **Python Equivalent**
+
+```python
+# For Loop
+for i in range(1, 5):
+    print(i)
+
+# While Loop
+counter = 0
+while counter < 5:
+    print(counter)
+    counter += 1
+```
+
+**Complexity:**
+
+- **For loops:** **O(n)** where `n` is the list size.
+- **While loops:** **O(n)** based on iterations needed.
+- **Until loops:** **O(n)** similar to while loops.
+
+---
+
+## Step-by-Step Walkthrough
+
+| Step | Description                      | Command Used                                        |
+| ---- | -------------------------------- | --------------------------------------------------- |
+| 1    | Iterate over a list              | `for var in list; do ... done`                      |
+| 2    | Use a counter in `while` loop    | `while [ $counter -lt 10 ]; do ((counter++)); done` |
+| 3    | Execute until a condition is met | `until [ $counter -eq 10 ]; do ((counter++)); done` |
+| 4    | Break or continue in a loop      | `if [ condition ]; then break; fi`                  |
+
+---
+
+## Exercise Solution
+
+Modify the script to encode `var` 28 times in Base64 and assign the length of the 28th encoding to `salt`.
+
+### **Updated Script**
+
+```bash
+#!/bin/bash
+
+var="9M"
+
+for i in {1..28}
+do
+    var=$(echo -n $var | base64)
+done
+
+salt=${#var}
+```
+
+**Expected Output (Example):**
+
+```
+Salt value: 160
+```
+
+---
+
+## Similar Questions & Real-World Uses
+
+- **Similar Scenarios:**
+  - Repeated encoding/decoding operations.
+  - Automating host enumeration.
+- **Real-World Applications:**
+  - **Cybersecurity Tasks:** Encoding payloads for obfuscation.
+  - **Network Scanning:** Iterating over IP ranges.
+  - **Automated Enumeration:** Processing multiple inputs dynamically.
+
+---
+
+This summary keeps key takeaways clear and easy to reference in the future. Let me know if you need modifications!

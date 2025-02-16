@@ -1,0 +1,106 @@
+---
+title: 'Flow Control - Branches'
+date: '2025-2-16'
+tags: ['HTB', 'guide', 'Bash']
+draft: false
+summary: 'Branching structures in Bash allow scripts to make decisions based on user input!'
+created: 2025-02-16T13:46
+updated: 2025-02-16T13:47
+---
+
+# Flow Control - Branches - HTB Notes
+
+## Overview
+
+Branching structures in Bash allow scripts to make decisions based on user input. The two primary branching mechanisms are:
+
+- **`if-else` statements**: Compare boolean expressions.
+- **`case` statements**: Match exact values and execute corresponding actions.
+
+---
+
+## Problem Description: Using `case` Statements for Decision Making
+
+A script should present a menu of options and execute specific functions based on user input.
+
+### **Input & Output**
+
+**Input:** User selection via `read`  
+**Output:** Executes a function or exits
+
+**Example Execution:**
+
+```bash
+./script.sh
+```
+
+**Example Output:**
+
+```
+Select your option: 1
+Executing network range identification...
+```
+
+---
+
+## Topics & Patterns
+
+- **Case Statements (`case $var in ... esac`)**: Execute different actions based on an exact match.
+- **Menu-Driven Scripts**: Handling user selection.
+- **Default Case (`*`)**: Catch-all for invalid input.
+
+---
+
+## Solution & Complexity
+
+### **Key Ideas**
+
+- `case $var in "1") command ;; esac`: Executes specific commands based on user choice.
+- `read -p "Prompt" var`: Captures user input.
+- `*` (default case): Handles unexpected inputs gracefully.
+
+### **Python Equivalent**
+
+```python
+option = input("Select your option: ")
+
+match option:
+    case "1":
+        print("Executing network range identification...")
+    case "2":
+        print("Pinging discovered hosts...")
+    case "3":
+        print("Running all checks...")
+    case _:
+        print("Exiting...")
+```
+
+**Complexity:**
+
+- **Case statement execution:** **O(1)** (constant time).
+- **Menu handling:** **O(n)** where `n` is the number of options.
+
+---
+
+## Step-by-Step Walkthrough
+
+| Step | Description            | Command Used                         |
+| ---- | ---------------------- | ------------------------------------ |
+| 1    | Display menu options   | `echo "1) Option 1"`                 |
+| 2    | Prompt for input       | `read -p "Select your option: " opt` |
+| 3    | Execute based on input | `case $opt in "1") command ;; esac`  |
+| 4    | Handle invalid inputs  | `*) exit 0 ;;`                       |
+
+---
+
+## Similar Questions & Real-World Uses
+
+- **Similar Scenarios:**
+  - Handling user choices in interactive scripts.
+  - Automating menu-based selections.
+- **Real-World Applications:**
+  - **System Administration:** Automating maintenance tasks.
+  - **Cybersecurity Tools:** Interactive enumeration and scanning.
+  - **Deployment Scripts:** Managing multiple options in configuration setups.
+
+---

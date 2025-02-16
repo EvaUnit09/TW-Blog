@@ -1,0 +1,136 @@
+---
+title: 'Conditional Execution'
+date: '2025-2-16'
+tags: ['HTB', 'guide', 'Bash']
+draft: false
+summary: 'Conditional execution allows scripts to control their flow based on different conditions'
+created: 2025-02-16T12:55
+updated: 2025-02-16T12:57
+---
+
+# Conditional Execution - HTB Notes
+
+## Overview
+
+Conditional execution allows Bash scripts to control their flow based on different conditions. This is essential for handling user inputs, processing data dynamically, and automating decision-making.
+
+## Key Concepts
+
+- **Shebang (`#!`)**: Specifies the script interpreter (e.g., `/bin/bash`, `/usr/bin/env python`).
+- **If-Else Statements**: Enables decision-making based on conditions.
+- **Special Variables**:
+  - `$#` → Number of arguments passed.
+  - `$0` → Script name.
+  - `$1` → First argument.
+
+---
+
+## Problem Description: Conditional Execution in Bash
+
+A script must check if a required argument (domain) is provided. If missing, it should prompt the user and exit.
+
+### **Input & Output**
+
+**Input:** Command-line argument (domain name)  
+**Output:** Error message if no argument is provided.
+
+**Example Execution:**
+
+```bash
+bash script.sh inlanefreight.com
+```
+
+---
+
+## Topics & Patterns
+
+- **Input Validation:** Ensures required arguments are provided.
+- **If-Else Conditionals:** Executes different commands based on input values.
+- **Error Handling:** Uses `exit` codes for graceful failure.
+
+---
+
+## Solution & Complexity
+
+### **Key Ideas**
+
+- `if [ $# -eq 0 ]`: Checks if no arguments are passed.
+- `elif [ $# -eq 1 ]`: Accepts a single argument.
+- `else`: Handles cases with too many arguments.
+
+### **Python Equivalent**
+
+```python
+import sys
+
+if len(sys.argv) == 1:
+    print("You need to specify the target domain.\nUsage: script.py <domain>")
+    sys.exit(1)
+elif len(sys.argv) > 2:
+    print("Too many arguments given.")
+    sys.exit(1)
+else:
+    domain = sys.argv[1]
+    print(f"Domain provided: {domain}")
+```
+
+**Complexity:**
+
+- Argument check is **O(1)** (constant time).
+- Condition checking runs in **O(1)**.
+
+---
+
+## Step-by-Step Walkthrough
+
+| Step | Description                      | Command Used                                        |
+| ---- | -------------------------------- | --------------------------------------------------- |
+| 1    | Check if an argument is provided | `if [ $# -eq 0 ]; then ...`                         |
+| 2    | Print an error if missing        | `echo -e "You need to specify the target domain."`  |
+| 3    | Accept and store the argument    | `domain=$1`                                         |
+| 4    | Handle multiple arguments        | `elif [ $# -gt 1 ]; then echo "Too many arguments"` |
+| 5    | Exit with an error code          | `exit 1`                                            |
+
+---
+
+## Exercise Solution
+
+Modify the `for` loop to print the character count of the 35th encoded value.
+
+### **Updated Script**
+
+```bash
+#!/bin/bash
+
+var="nef892na9s1p9asn2aJs71nIsm"
+
+for counter in {1..40}
+do
+    var=$(echo $var | base64)
+    if [ $counter -eq 35 ]; then
+        echo "Character count at step 35: $(echo ${#var})
+    fi
+done
+```
+
+**Expected Output Example:**
+
+```
+Character count at step 35: 88
+```
+
+---
+
+## Similar Questions & Real-World Uses
+
+- **Similar Scenarios:**
+  - Checking user input before executing system commands.
+  - Automating validation checks in shell scripts.
+- **Real-World Applications:**
+  - **Security Scripts:** Automating brute-force prevention.
+  - **Deployment Scripts:** Ensuring correct environment setup.
+  - **Penetration Testing:** Automating network scanning conditions.
+
+---
+
+This summary captures key takeaways while keeping it concise and useful for future reference. Let me know if you need adjustments!

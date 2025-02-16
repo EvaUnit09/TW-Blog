@@ -1,0 +1,130 @@
+---
+title: 'Arguments, Variables, and Arrays'
+date: '2025-2-16'
+tags: ['HTB', 'guide', 'Bash']
+draft: false
+summary: 'Notes on understanding command-line arguments, variables, and managing values using arrays.'
+created: 2025-02-16T13:12
+updated: 2025-02-16T13:12
+---
+
+# Arguments, Variables, and Arrays - HTB Notes
+
+## Overview
+
+Bash scripts can accept command-line arguments, use variables for storing data, and manage multiple values using arrays. Understanding these concepts is crucial for automating tasks efficiently.
+
+---
+
+## Problem Description: Handling Arguments in Bash
+
+A script should accept arguments, store them in variables, and use arrays for handling multiple values.
+
+### **Input & Output**
+
+**Input:** Command-line arguments  
+**Output:** Printed argument values or an error message if no argument is provided.
+
+**Example Execution:**
+
+```bash
+./script.sh inlanefreight.com
+```
+
+**Example Output:**
+
+```
+Domain: inlanefreight.com
+```
+
+---
+
+## Topics & Patterns
+
+- **Arguments (`$0-$9`)**: First argument is `$1`, script name is `$0`.
+- **Special Variables**:
+  - `$#` → Number of arguments.
+  - `$@` → List of arguments.
+  - `$$` → Process ID.
+  - `$?` → Exit status.
+- **Variables**: Assigned using `=` without spaces.
+- **Arrays**: Store multiple values using parentheses `()`.
+
+---
+
+## Solution & Complexity
+
+### **Key Ideas**
+
+- `if [ $# -eq 0 ]`: Checks if an argument is passed.
+- `domain=$1`: Assigns the first argument to a variable.
+- `domains=()` : Defines an array for multiple values.
+
+### **Python Equivalent**
+
+```python
+import sys
+
+if len(sys.argv) == 1:
+    print("You need to specify the target domain.")
+    sys.exit(1)
+
+domain = sys.argv[1]
+print(f"Domain: {domain}")
+```
+
+**Complexity:**
+
+- Argument handling is **O(1)**.
+- Array lookups are **O(1)** for direct indexing.
+
+---
+
+## Step-by-Step Walkthrough
+
+| Step | Description                      | Command Used                |
+| ---- | -------------------------------- | --------------------------- |
+| 1    | Check if an argument is provided | `if [ $# -eq 0 ]; then ...` |
+| 2    | Store the argument in a variable | `domain=$1`                 |
+| 3    | Print the value of the variable  | `echo $domain`              |
+| 4    | Define and access arrays         | `domains=(value1 value2)`   |
+
+---
+
+## Exercise Solution
+
+To print `"www2.inlanefreight.com"` from the array, use:
+
+```bash
+echo ${domains[1]}
+```
+
+### **Updated Script**
+
+```bash
+#!/bin/bash
+domains=("www.inlanefreight.com ftp.inlanefreight.com vpn.inlanefreight.com" www2.inlanefreight.com)
+echo ${domains[1]}
+```
+
+**Expected Output:**
+
+```
+www2.inlanefreight.com
+```
+
+---
+
+## Similar Questions & Real-World Uses
+
+- **Similar Scenarios:**
+  - Parsing command-line options.
+  - Handling multiple input values efficiently.
+- **Real-World Applications:**
+  - **Scripting Automation:** Passing arguments to scripts for configuration.
+  - **Cybersecurity Tools:** Automating enumeration with multiple targets.
+  - **DevOps & Deployment:** Managing configurations dynamically.
+
+---
+
+This summary keeps key takeaways clear and easy to reference in the future. Let me know if you need modifications!

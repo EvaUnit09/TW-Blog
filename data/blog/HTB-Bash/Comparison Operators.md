@@ -1,0 +1,142 @@
+---
+title: 'Comparison Operators'
+date: '2025-2-16'
+tags: ['HTB', 'guide', 'Bash']
+draft: false
+summary: 'Comparison operators allow scripts to compare values, check conditions, and make decisions.'
+created: 2025-02-16T13:18
+updated: 2025-02-16T13:21
+---
+
+# Comparison Operators - HTB Notes
+
+## Overview
+
+Comparison operators in Bash allow scripts to compare values, check conditions, and make decisions. These operators are grouped into:
+
+- **String operators**: Compare text values.
+- **Integer operators**: Compare numerical values.
+- **File operators**: Check file properties.
+- **Boolean operators**: Evaluate logical conditions.
+
+---
+
+## Problem Description: Conditional Checks in Bash
+
+A script should compare values using different operator types and execute conditions accordingly.
+
+### **Input & Output**
+
+**Input:** Strings, numbers, or file paths.  
+**Output:** Decision-based execution based on conditions.
+
+**Example Execution:**
+
+```bash
+./script.sh HackTheBox
+```
+
+**Example Output:**
+
+```
+Success!
+```
+
+---
+
+## Topics & Patterns
+
+- **String comparisons (`==`, !=, <, > ):** Checking text values.
+- **Integer comparisons (`-eq`, `-gt`, `-lt`):** Evaluating numbers.
+- **File checks (`-e`, `-f`, `-r`):** Validating files and permissions.
+- **Logical operators (`&&`, `||`, `!`):** Combining multiple conditions.
+
+---
+
+## Solution & Complexity
+
+### **Key Ideas**
+
+- `if [[ "$1" == "HackTheBox" ]]`: Ensures a required string input.
+- `if [ $# -gt 1 ]`: Prevents too many arguments.
+- `if [[ -e "$1" && -r "$1" ]]`: Checks file existence and read permissions.
+
+### **Python Equivalent**
+
+```python
+import os
+import sys
+
+if len(sys.argv) == 1 or sys.argv[1] != "HackTheBox":
+    print("You need to give 'HackTheBox' as an argument.")
+    sys.exit(1)
+
+if len(sys.argv) > 2:
+    print("Too many arguments given.")
+    sys.exit(1)
+
+if os.path.exists(sys.argv[1]) and os.access(sys.argv[1], os.R_OK):
+    print("We can read the file.")
+```
+
+**Complexity:**
+
+- String and integer comparisons are **O(1)**.
+- File checks depend on system calls (**O(1)** or **O(n)** in worst cases).
+
+---
+
+## Step-by-Step Walkthrough
+
+| Step | Description                        | Command Used                                  |
+| ---- | ---------------------------------- | --------------------------------------------- |
+| 1    | Check if an argument is provided   | `if [ $# -eq 0 ]; then ...`                   |
+| 2    | Compare strings using ==, !=       | `if [[ "$1" != "HackTheBox" ]]; then ...`     |
+| 3    | Compare numbers using `-gt`, `-lt` | `if [ $# -gt 1 ]; then ...`                   |
+| 4    | Check file properties              | `if [[ -e "$1" && -r "$1" ]]; then ...`       |
+| 5    | Handle multiple conditions         | `if [[ condition1 && condition2 ]]; then ...` |
+
+---
+
+## Exercise Solution
+
+Modify the `for` loop to check if `var` contains `value` and has more than 113,450 characters.
+
+### **Updated Script**
+
+```bash
+#!/bin/bash
+
+var="8dm7KsjU28B7v621Jls"
+value="ERmFRMVZ0U2paTlJYTkxDZz09Cg"
+
+for i in {1..40}
+do
+    var=$(echo $var | base64)
+
+    if [[ "$var" == *"$value"* && ${#var} -gt 113450 ]]; then
+        echo "Last 20 characters: ${var: -20}"
+    fi
+done
+```
+
+**Expected Output (Example):**
+
+```
+Last 20 characters: abcdefghijklmnopqrst
+```
+
+---
+
+## Similar Questions & Real-World Uses
+
+- **Similar Scenarios:**
+  - Checking login credentials in scripts.
+  - Validating user input.
+  - Ensuring file access permissions.
+- **Real-World Applications:**
+  - **Security Automation:** Checking password hashes or token validation.
+  - **Log Processing:** Filtering log entries based on conditions.
+  - **Penetration Testing:** Validating script inputs dynamically.
+
+---
