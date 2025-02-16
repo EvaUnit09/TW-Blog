@@ -1,13 +1,13 @@
 {
-  "htb": 9,
-  "guide": 11,
-  "bash": 9,
-  "networking": 2,
-  "network-traffic": 1,
   "mac": 1,
+  "networking": 2,
   "troubleshooting": 1,
+  "network-traffic": 1,
+  "guide": 12,
+  "github": 1,
+  "htb": 10,
+  "bash": 10,
   "powershell": 1,
   "webrequest": 1,
-  "tools": 1,
-  "github": 1
+  "tools": 1
 }
