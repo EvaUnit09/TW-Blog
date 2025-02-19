@@ -19,20 +19,6 @@ export default function Home({ posts }) {
             <a href="https://github.com/EvaUnit09" target="_blank" rel="noopener noreferrer">
               <Image src="/static/images/githubicon1.png" alt="GitHub" width={90} height={90} />
             </a>
-            <a
-              href="https://tryhackme.com/p/noahnotnulls"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image src="/static/images/THMlogo.svg" alt="TryHackMe" width={100} height={100} />
-            </a>
-            <a
-              href="https://www.hackthebox.com/home/users/profile/EvaUnit09"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image src="/static/images/htblogo.png" alt="HackTheBox" height={80} width={80} />
-            </a>
           </div>
         </div>
 
