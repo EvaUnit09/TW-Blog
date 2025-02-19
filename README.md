@@ -24,7 +24,7 @@ Notes: Personal notes from training, certifications, and hands-on projects in ar
 
 - Web Application Security
 
-## Features
+## Planned Features
 
 1. Write-ups:
 
