@@ -8,13 +8,13 @@ summary: 'Hydra is a fast network login cracker that supports numerous attack pr
 
 # 🚀 Introduction
 
-Why use hydra? It has:
+## Why use hydra?
 
 - speed and efficiency through parallel connections to perform multiple login attempts simultaneously
 - Flexibility to support many different protocols and services making it very adaptable
 - Very easy to use with straightforward command-line interface
 
-![Hydra](https://www.kali.org/tools/hydra/images/hydra-logo.svg) Edit 🖊️
+![Hydra](https://www.kali.org/tools/hydra/images/hydra-logo.svg)
 
 ---
 
@@ -38,8 +38,6 @@ EvaUnit09@htb[/htb]$ sudo apt-get -y install hydra
 ## Basic Usage
 
 Hydra's basic syntax is:
-
-Hydra
 
 ```shell-session
 EvaUnit09@htb[/htb]$ hydra [login_options] [password_options] [attack_options] [service_options]
@@ -77,8 +75,6 @@ Hydra services essentially define the specific protocols or services that Hydra 
 
 Test the security of a website using basic HTTP authentication at `www.example.com`. You have a list of potential usernames stored in `usernames.txt` and corresponding passwords in `passwords.txt`. To launch a brute-force attack against this HTTP service, use the following Hydra command:
 
-Hydra
-
 ```shell-session
 EvaUnit09@htb[/htb]$ hydra -L usernames.txt -P passwords.txt www.example.com http-get
 ```
@@ -95,8 +91,6 @@ Hydra will systematically try each username-password combination against the tar
 ### Targeting Multiple SSH Servers
 
 Consider a situation where you have identified several servers that may be vulnerable to SSH brute-force attacks. You compile their IP addresses into a file named `targets.txt` and know that these servers might use the default username "root" and password "toor." To efficiently test all these servers simultaneously, use the following Hydra command:
-
-Hydra
 
 ```shell-session
 EvaUnit09@htb[/htb]$ hydra -l root -p toor -M targets.txt ssh
@@ -149,8 +143,6 @@ Hydra will systematically attempt each password for the "admin" account, checkin
 ### Advanced RDP Brute-Forcing
 
 Now, imagine you're testing a Remote Desktop Protocol (RDP) service on a server with IP `192.168.1.100`. You suspect the username is "administrator," and that the password consists of 6 to 8 characters, including lowercase letters, uppercase letters, and numbers. To carry out this precise attack, use the following Hydra command:
-
-Hydra
 
 ```shell-session
 EvaUnit09@htb[/htb]$ hydra -l administrator -x 6:8:abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 192.168.1.100 rdp

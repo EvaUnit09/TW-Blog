@@ -1,13 +1,15 @@
 {
-  "mac": 1,
-  "networking": 2,
-  "troubleshooting": 1,
-  "network-traffic": 1,
-  "guide": 12,
-  "github": 1,
+  "cybersecurity": 1,
+  "login-brute-forcing": 1,
   "htb": 10,
+  "guide": 12,
   "bash": 10,
+  "networking": 2,
+  "network-traffic": 1,
+  "mac": 1,
+  "troubleshooting": 1,
   "powershell": 1,
   "webrequest": 1,
-  "tools": 1
+  "tools": 1,
+  "github": 1
 }
