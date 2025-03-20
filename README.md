@@ -64,7 +64,7 @@ Covering topics such as:
 
 - Markdown for content management
 
-Deployed and hosted on [GitHub Pages/Vercel/Netlify] (update based on your hosting platform).
+Deployed and hosted on Vercel (update based on your hosting platform).
 
 ## Contributing
 
