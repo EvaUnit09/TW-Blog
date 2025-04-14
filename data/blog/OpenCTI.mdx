@@ -1,0 +1,83 @@
+---
+title: 'OpenCTI'
+date: '2025-04-10'
+lastmod: '2025-02-05'
+tags: ['Cybersecurity', 'ThreatHunting', 'guide', 'MITRE']
+draft: false
+summary: 'This section will break down a workflow for performing traffic analysis, and we will become familiar with the key components.'
+images: []
+authors: ['Noah D']
+---
+
+# 📖 Topic: OpenCTI (Cyber Threat Intelligence Platform) — TryHackMe Room Walkthrough
+
+> _A breakdown of OpenCTI, an open-source platform for managing Cyber Threat Intelligence (CTI), exploring its features, structure, and how it helps with threat analysis._
+
+---
+
+## 🔑 Key Points
+
+- **OpenCTI Definition:** Open-source platform for storage, analysis, and presentation of threat campaigns, malware, and indicators of compromise (IOCs).
+- **Data Model:** Uses STIX2 standards for structuring threat intel as entities and relationships.
+- **Integration Capabilities:** Can integrate with MITRE ATT&CK, MISP, TheHive, and more.
+- **Dashboard Overview:** Provides visual summaries of threat data with widgets on entities, relationships, and reports.
+- **Key Sections:**
+  - Activities & Knowledge: Helps analysts investigate incidents and enrich knowledge.
+  - Analysis & Events: Central for processing reports and hunting suspicious activities.
+  - Observations: Maps technical indicators to assist in threat correlation.
+  - Arsenal: Lists tools, malware, attack patterns, and vulnerabilities.
+  - Entities: Categorizes data by sectors, countries, orgs, etc.
+- **Platform Architecture:**
+  - GraphQL API for database connection.
+  - Python workers for async processing.
+  - Connectors for data ingestion and export.
+
+---
+
+## 💡 Why It Matters
+
+- Provides a centralized view of threat intelligence, reducing the complexity of managing multiple threat feeds and sources.
+- Helps security teams correlate threats, understand attacker tactics, and respond faster.
+- Supports collaboration by structuring both technical and non-technical data.
+- Critical tool for SOC analysts and threat hunters in operational environments.
+
+---
+
+## 🛠️ Real-Life Use Cases
+
+- **SOC Investigation:** Analysts can track malware like CaddyWiper or threat actors like APT37, gather insights and correlate attack patterns.
+- **Incident Response:** Helps teams quickly map out IOCs and enrich investigations with context.
+- **Vulnerability Management:** By linking CVEs, OpenCTI can support patch prioritization.
+- **Reporting:** Enables creating detailed threat reports for stakeholders.
+
+_(Personal note: I could see this being valuable in real-world environments where multiple data sources need to be unified, like in enterprise SOCs.)_
+
+## 📝 TL;DR
+
+- OpenCTI is an open-source CTI platform that helps analysts manage, visualize, and act on threat intelligence.
+- It integrates with multiple tools and structures data using STIX2.
+- Supports real-time threat hunting and investigation workflows.
+
+---
+
+## 🚀 Next Steps / What I Want to Explore
+
+- Experiment with setting up an OpenCTI instance in my lab environment.
+- Test integrations with TheHive and MISP.
+- Dive deeper into connector development for custom data sources.
+- Explore how OpenCTI feeds into SIEM platforms for proactive monitoring.
+
+---
+
+### ✅ Personal Progress Tracker
+
+- [x] Practiced in a TryHackMe room
+- [x] Took notes in Joplin / blog
+- [ ] Applied in home lab
+- [ ] Revisited after a week for retention
+
+---
+
+### ✍️ End Note
+
+_Solid foundation for understanding OpenCTI! Great practical walkthrough via TryHackMe, and looking forward to trying a hands-on install in my personal lab to deepen the learning._

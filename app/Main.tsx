@@ -12,79 +12,13 @@ export default function Home({ posts }) {
     <>
       {/* Cybersecurity Profiles Section */}
       <div className="mb-8 rounded-lg bg-gray-900 p-8 text-white">
+        {/* Personal Info and icons */}
         <div className="flex flex-col items-center space-y-6">
-          {/* Personal Info and icons */}
-
+          <h2 className="justify-center text-xl">Github</h2>
           <div className="mt-4 flex justify-center space-x-6">
             <a href="https://github.com/EvaUnit09" target="_blank" rel="noopener noreferrer">
               <Image src="/static/images/githubicon1.png" alt="GitHub" width={90} height={90} />
             </a>
-          </div>
-        </div>
-
-        {/* Cybersecurity Profiles Section */}
-        <div className="mt-12">
-          <h2 className="mb-8 text-center text-3xl font-semibold">Training Profiles</h2>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-            {/* TryHackMe Profile */}
-            <div
-              className="flex flex-col items-center space-y-2 rounded-lg bg-gray-800 p-6 shadow-md"
-              style={{ height: 'auto', width: '100%', maxWidth: '420px' }} // Constrain to iframe size
-            >
-              <h3 className="text-xl font-bold">TryHackMe</h3>
-              <div
-                className="flex items-center justify-center"
-                style={{
-                  width: '90%',
-                  maxWidth: '410px', // Ensure it matches iframe dimensions
-                  height: 'auto',
-                }}
-              >
-                <iframe
-                  src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=3557796"
-                  style={{
-                    border: 'none',
-                    width: '410px', // Exact width of iframe content
-                    height: '88px', // Exact height of iframe content
-                  }}
-                  title="TryHackMe Badge"
-                ></iframe>
-              </div>
-              <a
-                href="https://tryhackme.com/p/Noahnotnull"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-green-400 hover:underline"
-              >
-                View Profile
-              </a>
-            </div>
-
-            {/* HackTheBox Profile */}
-            <div className="flex flex-col items-center space-y-4 rounded-lg bg-gray-800 p-6 shadow-md">
-              <h3 className="text-xl font-bold">HackTheBox</h3>
-              <a
-                href="https://app.hackthebox.com/profile/2242696"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Image
-                  src="/static/images/htbBadge.png"
-                  alt="Hack The Box Profile Badge"
-                  className="shadow-blue-gray-900/50 rounded-lg object-cover object-center shadow-xl"
-                  height={300}
-                  width={300}
-                />
-              </a>
-              <a
-                href="https://app.hackthebox.com/profile/2242696"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-green-400 hover:underline"
-              >
-                View Profile
-              </a>
-            </div>
           </div>
         </div>
       </div>
