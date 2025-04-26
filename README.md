@@ -8,9 +8,9 @@ About This Blog
 
 ## This blog serves as a knowledge hub for:
 
-Write-ups: Detailed solutions and explanations for cybersecurity challenges, labs, and CTFs.
+Write-ups
 
-Resources: A curated collection of tools, articles, tutorials, and references for learning and practicing cybersecurity.
+Resources
 
 Notes: Personal notes from training, certifications, and hands-on projects in areas like:
 
@@ -30,7 +30,7 @@ Notes: Personal notes from training, certifications, and hands-on projects in ar
 
 Step-by-step explanations for solving cybersecurity challenges.
 
-Categorized by platform (e.g., Hack The Box, TryHackMe) and difficulty level.
+Categorized by platform (e.g., Hack The Box, TryHackMe)
 
 2. Resources:
 
@@ -64,7 +64,7 @@ Covering topics such as:
 
 - Markdown for content management
 
-Deployed and hosted on Vercel (update based on your hosting platform).
+Deployed and hosted on Vercel
 
 ## Contributing
 
